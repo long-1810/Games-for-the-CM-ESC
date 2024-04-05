@@ -25,14 +25,7 @@
         </section>
 
         <section class="functionalities">
-            <form id="form">
-                <p class="title">Add new word sets to the list</p>
-                <label for="word-1">First word</label>
-                <label for="word-2">Second word</label>
-                <input type="text" name="word-1" id="word-1" placeholder="First Word">
-                <input type="text" name="word-2" id="word-2" placeholder="Second Word">
-                <input type="submit" name="submit" id="submit">
-            </form>
+            <button id="back">BACK</button>
 
             <div id="info">
                 <p>There are <span id="cards-left">16</span> cards left</p>
@@ -65,6 +58,13 @@
 
     <script src="../scripts/game.js"></script>
     <script src="../scripts/multiplayer.js"></script>
+    <script>
+        const backButton = document.getElementById("back")
+
+        backButton.addEventListener("click", () => {
+            window.location.href = "../index.html";
+        })
+    </script>
 </body>
 
 </html>

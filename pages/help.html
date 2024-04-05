@@ -34,7 +34,13 @@
         </ul>
     </div>
 
-    <script src="../scripts/help.js"></script>
+    <script>
+        const backButton = document.getElementById("back")
+
+        backButton.addEventListener("click", () => {
+            window.location.href = "../index.html";
+        })
+    </script>
 </body>
 
 </html>

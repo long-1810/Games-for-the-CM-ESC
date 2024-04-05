@@ -14,13 +14,14 @@ body {
     font-size: 2rem;
     color: var(--primary-text-1);
     font-weight: bold;
+    text-align: center;
+    line-height: 3rem;
 }
 
 .options {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    
 }
 
 .options button {

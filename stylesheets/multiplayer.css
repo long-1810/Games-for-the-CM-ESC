@@ -51,3 +51,20 @@ span {
 .score-blue {
     color: var(--blue) !important;
 }
+
+@media (max-width: 800px) {
+    #teams {
+        padding: 0.5rem;
+        width: min-content;
+        row-gap: 0.5rem;
+        column-gap: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #teams {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}

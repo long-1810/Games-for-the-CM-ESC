@@ -11,23 +11,6 @@
     margin-bottom: 2rem;
 }
 
-#back {
-    font-family: "Press Start 2P", system-ui;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    background: var(--secondary-bg-2);
-    color: var(--primary-text-1);
-    font-weight: bold;
-    border: 0.25rem solid var(--primary-text-2);
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-#back:hover {
-    background: var(--secondary-bg-1);
-  }
-
 .title {
     font-weight: bold;
 }
