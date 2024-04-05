@@ -98,10 +98,10 @@
 }
 
 #overlay {
-  position: absolute;
+  position: fixed;
   font-family: "Poppins", sans-serif;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   left: 0;
   top: 0;
   background: var(--overlay);
@@ -172,5 +172,17 @@
   .memory-card {
     width: 5rem;
     height: 5rem;
+  }
+  .front-face--text {
+    font-size: .75rem;
+  }
+  #win-screen {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    line-height: 3rem;
+  }
+  #reset {
+    font-size: .75rem;
+    padding: 1rem 2rem;
   }
 }
