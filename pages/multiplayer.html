@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>MEMORY MADNESS - BY TEAGO BUI</title>
+
+    <link rel="stylesheet" href="../stylesheets/global.css">
+    <link rel="stylesheet" href="../stylesheets/game.css">
+    <link rel="stylesheet" href="../stylesheets/multiplayer.css">
+</head>
+
+<body class="body-multiplayer">
+    <div class="container container-multiplayer">
+        <section id="memory-game">
+            <!-- <div class="memory-card" data-content="set-1">
+        <div class="front-face">
+          <p class="front-face--text">family</p>
+        </div>
+        <img class="back-face" src="img/esc-logo.jpg" alt="Memory Card">
+      </div> -->
+        </section>
+
+        <section class="functionalities">
+            <form id="form">
+                <p class="title">Add new word sets to the list</p>
+                <label for="word-1">First word</label>
+                <label for="word-2">Second word</label>
+                <input type="text" name="word-1" id="word-1" placeholder="First Word">
+                <input type="text" name="word-2" id="word-2" placeholder="Second Word">
+                <input type="submit" name="submit" id="submit">
+            </form>
+
+            <div id="info">
+                <p>There are <span id="cards-left">16</span> cards left</p>
+                <p>Time elapsed (in seconds): <span id="time-elapsed">0</span></p>
+                <p>Round <span id="round"></span></p>
+            </div>
+
+            <div id="teams">
+                <p class="title">SCORE</p>
+                <div class="team-red">
+                    <p class="title title-red">RED</p>
+                    <p class="score score-red">0</p>
+                </div>
+                <div class="team-blue">
+                    <p class="title title-blue">BLUE</p>
+                    <p class="score score-blue">0</p>
+                </div>
+            </div>
+        </section>
+
+    <!-- Special displays -->
+
+        <div id="win-screen" class="hidden">
+            <p class="title">TEAM ... WON</p>
+            <button id="reset">RESET</button>
+        </div>
+
+        <div id="overlay" class="hidden"></div>
+    </div>
+
+    <script src="../scripts/game.js"></script>
+    <script src="../scripts/multiplayer.js"></script>
+</body>
+
+</html>

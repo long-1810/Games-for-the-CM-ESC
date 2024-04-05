@@ -1,0 +1,106 @@
+{
+  "economic systems": [
+    "communism",
+    "democracy"
+  ],
+  "environment": [
+    "carbon footprint",
+    "fossil fuel"
+  ],
+  "archeology": [
+    "artifact",
+    "fossil"
+  ],
+  "crimes": [
+    "money laundering",
+    "tax evasion"
+  ],
+  "biology": [
+    "neuroscience",
+    "anatomy"
+  ],
+  "fashion styles": [
+    "chic",
+    "vintage"
+  ],
+  "COVID-19": [
+    "quarantine",
+    "social distancing"
+  ],
+  "intellectual property": [
+    "authorship",
+    "copyright"
+  ],
+  "animal categories": [
+    "amphibian",
+    "reptile"
+  ],
+  "transaction methods": [
+    "credit card",
+    "digital currency"
+  ],
+  "film genres": [
+    "fantasy",
+    "romance"
+  ],
+  "senses": [
+    "peripheral vision",
+    "hearing"
+  ],
+  "natural disasters": [
+    "volcanic eruption",
+    "tsunami"
+  ],
+  "technology": [
+    "AI",
+    "CPU"
+  ],
+  "color": [
+    "monochrome",
+    "greyscale"
+  ],
+  "traffic": [
+    "junction",
+    "roundabout"
+  ],
+  "medicine": [
+    "painkiller",
+    "antibiotic"
+  ],
+  "mathematics": [
+    "algebra",
+    "geometry"
+  ],
+  "physics": [
+    "velocity",
+    "acceleration"
+  ],
+  "landscapes": [
+    "plateau",
+    "archipelago"
+  ],
+  "advertisement": [
+    "billboard",
+    "brand recognition"
+  ],
+  "language": [
+    "dialect",
+    "accent"
+  ],
+  "culture": [
+    "heritage",
+    "ethics"
+  ],
+  "education": [
+    "curriculum",
+    "college"
+  ],
+  "music": [
+    "harmony",
+    "choir"
+  ],
+  "art": [
+    "oil paintings",
+    "fine arts"
+  ]
+}

@@ -1,0 +1,44 @@
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-text-1);
+}
+
+#info {
+  border: 0.1rem solid var(--primary-text-1);
+}
+
+#info span {
+  color: var(--secondary-text-1);
+}
+
+#memory-game {
+  border: 0.1rem solid var(--primary-text-1);
+
+}
+
+.teams {
+  width: 100%;
+  height: min-content;
+  padding: 1rem;
+  background: none;
+  border: .1rem solid var(--primary-text-1);
+  border-radius: .25rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-items: center;
+}
+
+.teams p {
+  color: var(--primary-text-1);
+}
+
+.teams .title {
+  font-weight: 700;
+  grid-column: span 2;
+}
+
+.teams .score {
+  color: var(--secondary-text-1);
+  font-weight: bold;
+}
