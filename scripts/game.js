@@ -25,8 +25,6 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
-
-
 function calculateTimeElapsed() {
   const TIME_NOW = Date.now();
   let elapsed = TIME_NOW - TIME_START;
@@ -101,13 +99,15 @@ function flipCard() {
 }
 
 function checkForMatch() {
+  console.log(firstCard, secondCard)
+
   let isMatch = firstCard.dataset.content === secondCard.dataset.content;
   if (isMatch) {
     disableCards();
     cardsLeft -= 2;
     cardsLeftText.innerHTML = cardsLeft;
     checkWin();
-    resetBoard()
+    resetBoard();
   } else {
     unflipCards();
   }

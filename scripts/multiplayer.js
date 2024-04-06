@@ -39,7 +39,7 @@ function checkForMatch() {
 
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
-    [firstCard, secondCard] = [null, null];    
+    [firstCard, secondCard] = [null, null];
     const lastGameTurn = gameTurn
     gameTurn = lastGameTurn === "red" ? "blue" : "red"
     boxes.forEach((box) => {
@@ -52,17 +52,17 @@ function resetBoard() {
 
 function checkWin() {
     if (cardsLeft <= 0) {
-      isGameStopped = true;
-      displayWinningScreen();
+        isGameStopped = true;
+        displayWinningScreen();
     }
-  }
+}
 
-  function displayWinningScreen() {
+function displayWinningScreen() {
     winTitle.innerHTML = `TEAM ${gameTurn.toUpperCase()} WON`
 
     winScreen.classList.remove("hidden");
     overlay.classList.remove("hidden");
-  }
+}
 
 boxes.forEach((box) => {
     box.classList.add(FIRST_TURN)
