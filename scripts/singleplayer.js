@@ -15,3 +15,10 @@ function checkForMatch() {
     unflipCards();
   }
 }
+
+function checkWin() {
+  if (cardsLeft <= 0) {
+    isGameStopped = true;
+    displayWinningScreen();
+  }
+}

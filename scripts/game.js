@@ -8,7 +8,7 @@ const resetButton = document.getElementById("reset");
 
 const NUMBER_OF_CARDS = 16;
 const POINTS_PER_CORRECT_ANSWER = 2;
-const CARD_SHOW_UP_DURATION = 1500;
+const CARD_SHOW_UP_DURATION = 500;
 const imageCardURL = "../img/esc-logo.jpg"
 const wordListURL = "../words.json"
 
@@ -19,7 +19,6 @@ let cardsLeft = NUMBER_OF_CARDS;
 let isGameStopped = false;
 
 let words;
-let usedWords = {};
 let cards;
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -42,9 +41,7 @@ function chooseRandomSet(setList, quantity) {
   let wordsObj = {};
 
   while (Object.keys(wordsObj).length < quantity / 2) {
-    const keys = Object.keys(setList).filter((element) => {
-      return !usedWords.hasOwnProperty(element)
-    });
+    const keys = Object.keys(setList)
     const randomIndex = (keys.length * Math.random()) << 0;
     const setName = keys[randomIndex];
     const setContent = setList[setName];
@@ -53,10 +50,6 @@ function chooseRandomSet(setList, quantity) {
       ...wordsObj,
       [setName]: setContent,
     };
-    usedWords = {
-      ...usedWords,
-      [setName]: setContent
-    }
   }
   return wordsObj;
 }
@@ -67,7 +60,6 @@ function generateCards(quantity) {
   for (let i = 0; i < quantity / 2; i++) {
     const wordSet = wordArray[i][1];
     const wordSetName = wordArray[i][0];
-    console.log(wordSet);
     const [firstWord, secondWord] = wordSet;
 
     const firstCard = `<div class="memory-card" data-content="${wordSetName}"><div class="front-face"><p class="front-face--text">${firstWord}</p></div><img class="back-face" src=${imageCardURL} alt="Memory Card"></div>`;
@@ -99,8 +91,6 @@ function flipCard() {
 }
 
 function checkForMatch() {
-  console.log(firstCard, secondCard)
-
   let isMatch = firstCard.dataset.content === secondCard.dataset.content;
   if (isMatch) {
     disableCards();
@@ -146,15 +136,9 @@ function displayWinningScreen() {
   overlay.classList.remove("hidden");
 }
 
-function checkWin() {
-  if (cardsLeft <= 0) {
-    isGameStopped = true;
-    displayWinningScreen();
-  }
-}
+
 
 async function resetGame() {
-  console.log("RESET");
   cardList.innerHTML = "";
 
   // OPTIONAL: if you want to count time elapsed for each round only
@@ -166,6 +150,10 @@ async function resetGame() {
   winScreen.classList.add("hidden");
   overlay.classList.add("hidden");
   isGameStopped = false;
+  scoreRed = 0
+  scoreBlue = 0
+  scoreTextRed.innerText = scoreRed
+  scoreTextBlue.innterText = scoreBlue
 
   main();
 }

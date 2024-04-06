@@ -46,20 +46,24 @@ function resetBoard() {
         box.classList.remove(lastGameTurn)
         box.classList.add(gameTurn)
     })
-
-
 }
 
 function checkWin() {
     if (cardsLeft <= 0) {
         isGameStopped = true;
-        displayWinningScreen();
+        displayWinningScreen()
     }
 }
 
 function displayWinningScreen() {
-    winTitle.innerHTML = `TEAM ${gameTurn.toUpperCase()} WON`
-
+    if (scoreRed === scoreBlue) {
+        winTitle.innerHTML = "TIE"
+    } else if (scoreRed > scoreBlue) {
+        winTitle.innerHTML = "TEAM RED WON"
+    } else if (scoreRed < scoreBlue) {
+        winTitle.innerHTML = "TEAM BLUE WON"
+    }
+    
     winScreen.classList.remove("hidden");
     overlay.classList.remove("hidden");
 }
